@@ -1,0 +1,11 @@
+.main-page{
+    display: flex;
+    flex-direction: column;
+}
+.bootstrap-carousel{
+    height: 100%;
+}
+.container{
+    width: 50%;
+    max-height: 100%;
+}
