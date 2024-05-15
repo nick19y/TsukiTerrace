@@ -19,7 +19,7 @@
 <body>
     <header>
         <div class="back">
-            <a href="main.html">
+            <a href="main.php">
                 <img src="/img/back.png" alt="">
             </a>
         </div>
@@ -37,8 +37,8 @@
                         <th scope="col" class="col-1">id</th>
                         <th scope="col" class="col-1">Nome</th>
                         <th scope="col" class="col-6">Descrição</th>
-                        <th scope="col" class="col-2">Preço</th>
-                        <th scope="col" class="col-2">Ação</th>
+                        <th scope="col" class="col-1">Preço</th>
+                        <th scope="col" class="col-4">Ação</th>
                     </tr>
                 </thead>
                 <tbody>

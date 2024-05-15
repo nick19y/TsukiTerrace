@@ -11,10 +11,11 @@
     if($id!==false && $id !== null){
         $sql = "SELECT * FROM products WHERE id = ?";
         $statement = $statement = $pdo->prepare($sql);
-        $statement->bindValue(1, $id);
+        $statement->bindValue(1, $id, PDO::PARAM_INT);
         $statement->execute();
         $product = $statement->fetch(PDO::FETCH_ASSOC);
     }
+    var_dump($_SERVER['REQUEST_METHOD']);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -33,7 +34,7 @@
                 <img src="/img/logo64.png" alt="">
                 <h1>TsukiTerrace</h1>
             </div>
-            <form class="form" method="post" action="/new-product">
+            <form class="form" method="post">
                 <label class="label-form" for="name">Nome:</label>
                 <input class="input-form" type="text" name="name" value="<?= $product['name']; ?>">
                 

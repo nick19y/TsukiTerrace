@@ -2,8 +2,14 @@
 
 $pdo = new PDO("mysql:host=localhost;dbname=tsuki_terrace", "root", "");
 
-$name = filter_input(INPUT_POST, 'name');
+$id = filter_input(INPUT_POST, 'id');
 if($id===false || $id===null){
+    header('Location: /?sucesso=0');
+    exit();
+}
+
+$name = filter_input(INPUT_POST, 'name');
+if($name===false || $name===null){
     header('Location: /?sucesso=0');
     exit();
 }
