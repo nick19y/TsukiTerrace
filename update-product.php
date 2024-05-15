@@ -13,6 +13,7 @@ if($name===false || $name===null){
     header('Location: /?success=0');
     exit();
 }
+$kmlaksdmflaksmdflkamdflkmasldfkmasldfkmalsdk = 0;
 
 $description = filter_input(INPUT_POST, 'description');
 if($description===false){
