@@ -35,16 +35,16 @@
                 <thead>
                     <tr class="text-center">
                         <th scope="col" class="col-1">id</th>
-                        <th scope="col" class="col-1">Nome</th>
-                        <th scope="col" class="col-6">Descrição</th>
+                        <th scope="col" class="col-3">Nome</th>
+                        <th scope="col" class="col-4">Descrição</th>
                         <th scope="col" class="col-1">Preço</th>
-                        <th scope="col" class="col-4">Ação</th>
+                        <th scope="col" class="col-3">Ação</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($productList as $product):?>
                     <tr>
-                        <th scope="row" class="text-center">1</th>
+                        <th scope="row" class="text-center"><?= $product['id']?></th>
                         <td class="text-center"><?=$product['name']?></td>
                         <td class="description"><?=$product['description']?></td>
                         <td class="text-center">R$ <?=$product['price']?></td>

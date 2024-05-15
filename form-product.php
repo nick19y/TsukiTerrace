@@ -15,7 +15,6 @@
         $statement->execute();
         $product = $statement->fetch(PDO::FETCH_ASSOC);
     }
-    var_dump($_SERVER['REQUEST_METHOD']);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

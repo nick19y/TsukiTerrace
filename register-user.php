@@ -15,14 +15,15 @@
                 <img src="/img/logo64.png" alt="">
                 <h1>TsukiTerrace</h1>
             </div>
-            <form action="main.html" class="form">
+            <form action="login.php" class="form">
+                <label class="label-form" for="name">Nome:</label>
+                <input class="input-form" type="text" name="name">
                 <label class="label-form" for="">Email:</label>
                 <input class="input-form" type="text" name="email">
                 <label class="label-form" for="">Senha:</label>
                 <input class="input-form" type="text" name="password">
-                <button class="btn-form">Entrar</button>
+                <button class="btn-form">Cadastrar</button>
             </form>
-            <p>Não tem uma conta ainda? <a href="register-user.html">Cadastre-se!</a></p>
         </div>
     </main>
 </body>
