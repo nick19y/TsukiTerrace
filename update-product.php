@@ -2,21 +2,27 @@
 
 $pdo = new PDO("mysql:host=localhost;dbname=tsuki_terrace", "root", "");
 
-$name = filter_input(INPUT_POST, 'name');
+$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 if($id===false || $id===null){
-    header('Location: /?sucesso=0');
+    header('Location: /?success=0');
+    exit();
+}
+
+$name = filter_input(INPUT_POST, 'name');
+if($name===false || $name===null){
+    header('Location: /?success=0');
     exit();
 }
 
 $description = filter_input(INPUT_POST, 'description');
 if($description===false){
-    header('Location: /?sucesso=0');
+    header('Location: /?success=0');
     exit();
 }
 
 $price = filter_input(INPUT_POST, 'price');
 if($price===false){
-    header('Location: /?sucesso=0');
+    header('Location: /?success=0');
     exit();
 }
 

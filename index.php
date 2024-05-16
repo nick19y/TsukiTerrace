@@ -18,4 +18,6 @@ if(!array_key_exists('PATH_INFO', $_SERVER)||$_SERVER['PATH_INFO']==='/'){
     require_once 'delete-product.php';
 } else if($_SERVER['PATH_INFO']==='/admin'){
     require_once 'admin.php';
+} else if($_SERVER['PATH_INFO']==='/login'){
+    require_once 'login.php';
 }
