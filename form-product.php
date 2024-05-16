@@ -21,7 +21,7 @@
     <main>
         <div class="div-form">
         <?php require_once 'logo-html.php' ?>
-            <form class="form" method="post">
+            <form" method="post">
                 <label class="label-form" for="name">Nome:</label>
                 <input class="input-form" type="text" name="name" value="<?= $product['name']; ?>">
                 
@@ -39,4 +39,4 @@
             </form>
         </div>
     </main>
-    <?php require_once 'end-html.php' ?>
+      <?php require_once 'end-html.php' ?>
