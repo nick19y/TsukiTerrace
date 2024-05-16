@@ -3,7 +3,7 @@
     <main>
         <div class="div-form">
         <?php require_once 'logo-html.php' ?>
-            <form action="login.php" class="form">
+            <form action="login" class="form">
                 <label class="label-form" for="name">Nome:</label>
                 <input class="input-form" type="text" name="name">
                 <label class="label-form" for="">Email:</label>
