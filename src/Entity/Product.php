@@ -12,12 +12,36 @@ class Product{
     {
         $this->setName($name);
     }
+    public function setId(int $id):void
+    {
+        $this->id = $id;
+    }
     private function setName(string $name)
     {
         $this->name = $name;
     }
-    public function setId(int $id):void
+        public function setDescription(string $description):void
     {
-        $this->id = $id;
+        $this->description = $description;
+    }
+    public function setPrice(string $price):void
+    {
+        $this->price = $price;
+    }
+    public function getId():int
+    {
+        return $this->id;
+    }
+    public function getName():string
+    {
+        return $this->name;
+    }
+    public function getDescription():string
+    {
+        return $this->description;
+    }
+    public function getPrice():float
+    {
+        return $this->price;
     }
 }

@@ -1,5 +1,15 @@
 .add-item{
     position: absolute;
+    left: 3em;
+}
+.back-form{
+    top: 3em;
+}
+.logout-form{
+    top: 3em;
+}
+.logout{
+    position: absolute;
     right: 3em;
 }
 .logo{

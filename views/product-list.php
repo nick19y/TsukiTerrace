@@ -6,6 +6,11 @@
                         <img src="/img/back.png" alt="">
                     </a>
                 </div>
+                <div class="logout">
+                    <a href="/login">
+                        <img src="/img/logout.png" alt="">
+                    </a>
+                </div>
                 <?php require_once __DIR__ . '/logo-html.php'; ?>
             </header>
             <main>
@@ -23,15 +28,15 @@
                         <tbody>
                             <?php foreach ($productList as $product):?>
                             <tr>
-                                <th scope="row" class="text-center"><?= $product->id; ?></th>
-                                <td class="text-center"><?=$product->name; ?></td>
-                                <td class="description"><?=$product->description; ?></td>
-                                <td class="text-center">R$ <?=$product->price; ?></td>
+                                <th scope="row" class="text-center"><?= $product->getId(); ?></th>
+                                <td class="text-center"><?=$product->getName(); ?></td>
+                                <td class="description"><?=$product->getDescription(); ?></td>
+                                <td class="text-center">R$ <?=$product->getPrice(); ?></td>
                                 <td class="text-center">
-                                    <a class="link-a" href="/update-product?id=<?=$product->id; ?>">
+                                    <a class="link-a" href="/update-product?id=<?=$product->getId(); ?>">
                                         <button type="button" class="btn btn-primary mx-2">Atualizar</button>
                                     </a>
-                                    <a class="link-a" href="/delete-product?id=<?= $product->id; ?>">
+                                    <a class="link-a" href="/delete-product?id=<?= $product->getId(); ?>">
                                         <button type="button" class="btn btn-danger">Excluir</button>
                                     </a>
                                 </td>

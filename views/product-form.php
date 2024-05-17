@@ -1,6 +1,18 @@
 <?php
 require_once __DIR__ . '/head-html.php'; ?>
 <body>
+    <header>
+        <div class="back back-form">
+            <a href="/admin">
+                <img src="/img/back.png" alt="">
+            </a>
+        </div>
+        <div class="logout logout-form">
+            <a href="/login">
+                <img src="/img/logout.png" alt="">
+            </a>
+        </div>
+    </header>
     <main>
         <div class="div-form">
         <?php require_once __DIR__ . '/logo-html.php'; ?>

@@ -6,6 +6,11 @@
                             <img src="/img/add.png" alt="">
                         </a>
                     </div>
+                    <div class="logout">
+                        <a href="/login">
+                            <img src="/img/logout.png" alt="">
+                        </a>
+                    </div>
                     <?php require_once __DIR__ . '/logo-html.php'; ?>
                 </header>
                 <main class="main-page">
@@ -40,9 +45,9 @@
                             <?php foreach ($productList as $product):?>
                             <li class="menu-item">
                                 <img src="/img/sushi.webp" alt="" class="img-menu">
-                                <h3 class="item-title"><?=$product->name;?></h3>
-                                <p class="description"><?=$product->description;?></p>
-                                <h4 class="price">R$ <?=$product->price;?></h4>
+                                <h3 class="item-title"><?=$product->getName();?></h3>
+                                <p class="description"><?=$product->getDescription();?></p>
+                                <h4 class="price">R$ <?=$product->getPrice();?></h4>
                             </li>
                             <?php endforeach;?>
                         </ul>

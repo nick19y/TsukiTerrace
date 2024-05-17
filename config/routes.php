@@ -8,4 +8,6 @@ return [
     'GET|/delete-product' => \TsukiTerrace\MVC\Controller\DeleteProductController::class,
     'POST|/admin' => \TsukiTerrace\MVC\Controller\ProductListController::class,
     'GET|/admin' => \TsukiTerrace\MVC\Controller\ProductListController::class,
+    'GET|/login' => \TsukiTerrace\MVC\Controller\LoginFormController::class,
+    'POST|/login' => \TsukiTerrace\MVC\Controller\LoginController::class,
 ];
