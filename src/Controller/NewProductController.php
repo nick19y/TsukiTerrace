@@ -27,7 +27,15 @@ class NewProductController implements Controller
             header('Location: admin?success=0');
             return;
         }
-    $success = $this->productRepository->create(new Product($name, $description, $price));
+    
+    $product = new Product($name, $description, $price);
+    if($_FILES['image']['error']===UPLOAD_ERR_OK){
+        move_uploaded_file($_FILES['image']['tmp_name'], __DIR__ . '/../../public/img/uploads/' . $_FILES['image']['name']);
+        $product->setImage($_FILES['image']['name']);
+    }
+
+
+    $success = $this->productRepository->create($product);
         if($success===false){
             header('Location: admin?success=0');
         } else{

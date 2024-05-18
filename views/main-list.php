@@ -7,7 +7,7 @@
                         </a>
                     </div>
                     <div class="logout">
-                        <a href="/login">
+                        <a href="/logout">
                             <img src="/img/logout.png" alt="">
                         </a>
                     </div>
@@ -44,7 +44,11 @@
                         <ul class="menu-options">
                             <?php foreach ($productList as $product):?>
                             <li class="menu-item">
-                                <img src="/img/sushi.webp" alt="" class="img-menu">
+                                <?php if($product->getImage()!==null): ?>
+                                    <img src="/img/uploads/<?= $product->getImage();?>" alt="" class="img-menu">
+                                <?php else:?>
+                                    <img src="/img/logo128.png" alt="" class="img-menu">
+                                <?php endif; ?>
                                 <h3 class="item-title"><?=$product->getName();?></h3>
                                 <p class="description"><?=$product->getDescription();?></p>
                                 <h4 class="price">R$ <?=$product->getPrice();?></h4>

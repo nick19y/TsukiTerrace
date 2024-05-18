@@ -7,7 +7,7 @@
                     </a>
                 </div>
                 <div class="logout">
-                    <a href="/login">
+                    <a href="/logout">
                         <img src="/img/logout.png" alt="">
                     </a>
                 </div>

@@ -10,4 +10,7 @@ return [
     'GET|/admin' => \TsukiTerrace\MVC\Controller\ProductListController::class,
     'GET|/login' => \TsukiTerrace\MVC\Controller\LoginFormController::class,
     'POST|/login' => \TsukiTerrace\MVC\Controller\LoginController::class,
+    'GET|/logout' => \TsukiTerrace\MVC\Controller\LogoutController::class,
+    'GET|/register-user' => \TsukiTerrace\MVC\Controller\RegisterUserFormController::class,
+    'POST|/register-user' => \TsukiTerrace\MVC\Controller\RegisterUserController::class,
 ];

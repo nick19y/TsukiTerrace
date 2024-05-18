@@ -33,8 +33,17 @@ class UpdateProductController implements Controller
             header('Location: /?success=0');
             return;
         }
+
         $product = new Product($name, $description, $price);
         $product->setId($id);
+        if ($_FILES['image']['error'] === UPLOAD_ERR_OK) {
+            move_uploaded_file(
+                $_FILES['image']['tmp_name'],
+                __DIR__ . '/../../public/img/uploads/' . $_FILES['image']['name']
+            );
+            $product->setImage($_FILES['image']['name']);
+        }
+
         $success = $this->productRepository->update($product);
         if($success === false){
             header("Location: admin?success=0");

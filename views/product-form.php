@@ -8,7 +8,7 @@ require_once __DIR__ . '/head-html.php'; ?>
             </a>
         </div>
         <div class="logout logout-form">
-            <a href="/login">
+            <a href="/logout">
                 <img src="/img/logout.png" alt="">
             </a>
         </div>
@@ -16,7 +16,7 @@ require_once __DIR__ . '/head-html.php'; ?>
     <main>
         <div class="div-form">
         <?php require_once __DIR__ . '/logo-html.php'; ?>
-            <form method="post" class="form">
+            <form method="post" class="form" enctype="multipart/form-data">
                 <label class="label-form" for="name">Nome:</label>
                 <input class="input-form" type="text" name="name" value="<?= $product?->name; ?>">
                 
@@ -27,10 +27,10 @@ require_once __DIR__ . '/head-html.php'; ?>
                 <label class="label-form" for="price">Preço:</label>
                 <input class="input-form" type="text" name="price" value="<?= $product?->price; ?>">
                 
-                <!-- <label class="label-form" for="image">Imagem:</label>
-                <input class="input-form" type="file" name="image"> -->
+                <label class="label-form" for="image">Imagem:</label>
+                <input class="input-form" type="file" name="image" accept="image/*">
                 
-                <button class="btn-form">Enviar</button>
+                <button class="btn-form" type="submit">Enviar</button>
             </form>
         </div>
     </main>

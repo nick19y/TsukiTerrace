@@ -10,7 +10,7 @@
                 <input class="input-form" type="password" name="password">
                 <button class="btn-form" type="submit">Entrar</button>
             </form>
-            <p>Não tem uma conta ainda? <a href="register-user">Cadastre-se!</a></p>
+            <p>Não tem uma conta ainda? <a href="/register-user">Cadastre-se!</a></p>
         </div>
     </main>
 <?php require_once __DIR__ . '/end-html.php'; ?>
